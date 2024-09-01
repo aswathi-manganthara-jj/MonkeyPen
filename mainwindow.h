@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "ui_mainwindow.h"
+#include "mydialog.h"
+#include "savedialog.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,6 +24,8 @@ private slots:
     void on_actionOpen_File_triggered();
 
     void on_actionSave_As_triggered();
+
+    void on_actionSave_triggered();
 
 private:
     Ui::MainWindow *ui;

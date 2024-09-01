@@ -1,6 +1,4 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include "mydialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -18,9 +16,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_actionNew_File_triggered()
 {
-myDialog dlg;
-dlg.setModal(true);
-dlg.exec();
+    myDialog dlg;
+    dlg.setModal(true);
+    dlg.exec();
 }
 
 void MainWindow::on_actionOpen_File_triggered()
@@ -30,5 +28,14 @@ void MainWindow::on_actionOpen_File_triggered()
 
 void MainWindow::on_actionSave_As_triggered()
 {
+    SaveDialog dlg;
+    dlg.setModal(true);
+    dlg.exec();
+}
 
+void MainWindow::on_actionSave_triggered()
+{
+    SaveDialog dlg;
+    dlg.setModal(true);
+    dlg.exec();
 }
